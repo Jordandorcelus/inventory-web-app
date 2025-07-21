@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Inventory Web App</title>
+</head>
+<body>
+    <div class="grid-container">
+    <h1 class="header">Booktory</h1>
+    <div class="main-list">
+        <h2>Available Books</h2>
+        <ul class="book-list">
+            <li class="first-book">
+                <a href="https://www.betterworldbooks.com/product/detail/swan-song-9780316258876">
+                    <img src="https://images.bwbcovers.com/031/9780316258876.jpg" alt="Cover of Swan Song book by Elin Hilderbrand" class="first-img">
+                    </a>
+                    <div class="first-details">
+                     <a href="https://www.betterworldbooks.com/product/detail/swan-song-9780316258876">
+                        <h3 class="book-title">Swan Song</h3>
+                    </a>
+                     <a href="https://en.wikipedia.org/wiki/Elin_Hilderbrand">
+                        <p class="author-name">Elin Hilderbrand</p>
+                    </a>
+                     <span class="stock in">In Stock</span>
+                    <p class="book-price">$18.99</p>
+                 </div>
+                <div class="delete-wrap">
+                     <button class="delete-btn">🗑️</button>
+                </div>
+            </li>
+                <li class="first-book">
+                    <a href="https://www.fantasticfiction.com/c/ann-cleeves/lonely-man.htm">
+                        <img src="https://m.media-amazon.com/images/I/51q65fHUHkL.SX316.SY480._SL500_.jpg" alt="" class="first-img">
+                    </a>
+                    <div class="first-details">
+                        <a href="https://www.fantasticfiction.com/c/ann-cleeves/lonely-man.htm">
+                            <h3 class="book-title">The Lonely Man</h3>
+                        </a>
+                        <a href="https://en.wikipedia.org/wiki/Ann_Cleeves">
+                            <p class="author-name">Ann Cleeves</p>
+                        </a>
+                        <span class="stock in">In Stock</span>
+                        <p class="book-price">$22.59</p>
+                    </div>
+                    <div class="delete-wrap">
+                        <button class="delete-btn">🗑️</button>
+                    </div>
+                    
+                    </li>
+                <li class="first-book">
+                    <a href="https://www.goodreads.com/book/show/220161203-a-family-matter">
+                        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1748524921i/220161203.jpg" alt="" class="first-img">
+                    </a>
+                    <div class="first-details">
+                        <a href="https://www.goodreads.com/book/show/220161203-a-family-matter">
+                            <h3 class="book-title">A Family Matter</h3>
+                        </a>
+                        <a href="https://en.wikipedia.org/wiki/Claire_Lynch">
+                            <p class="author-name">Claire Lynch</p>
+                        </a>
+                        <span class="stock in">In Stock</span>
+                        <p class="book-price">$12.99</p>
+                </div>
+                <div class="delete-wrap">
+                        <button class="delete-btn">🗑️</button>
+                    </div>
+              </li>
+        </ul>
+    </div>
+    <div class="vertical-bar"></div>
+    <div class="container">
+        <form class="new-book" id="new_book">
+            <input type="text" name="book_title" class="book-title" id="title" placeholder="Title">
+            <input type="text" name="book_author" class="book-author" id="author" placeholder="Author">
+            <input type="text" name="book_image" class="book-image" id="image_url" placeholder="Image URL">
+            <input type="text" name="book_price" class="book-price" id="price" placeholder="Price">
+            <div class="select-stock">
+            <label for="instock">In Stock</label>
+            <select name="in_stock" id="instock" required>
+            <option value="" disabled selected></option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+            </select>
+    </div>
+            <button type="submit">Add Book</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(222, 217, 217);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 10% 1fr 10% 1fr;
+    gap: 2rem;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    grid-column: 1 / 2;
+    grid-row: 1 / span 2;
+    font-size: 50px;
+    color: rgb(23, 4, 76);
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    align-self: center;
+    font-weight: lighter;
+    margin: 20px;
+}
+
+.main-list {
+    grid-column: 2 / 3;
+}
+
+
+.main-list, .book-list {
+    list-style: none;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: rgb(28, 139, 28);
+    margin: 10PX;
+}
+
+.first-book {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #222;
+    padding: 10px 0;
+    font-size: small;
+}
+
+.first-img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.first-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.book-title {
+    color: navy;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.author-name {
+    font-style: italic;
+    font-size: .9rem;
+    color: #444;
+    margin: 0;
+}
+
+.book-price {
+    font-weight: bold;
+    color: rgb(0, 19, 128);
+    font-size: .95rem;
+    margin: 0;
+}
+
+
+.stock {
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    width: fit-content;
+}
+
+.stock.in {
+    background-color: #218a21;
+}
+
+.stock.out {
+    background-color: #ffe6e6;
+}
+
+
+.delete-wrap {
+  display: flex;
+  align-items: flex-start;
+  padding-left: 10px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #4a4848;
+  margin-left: 30px;
+  align-self: flex-start;
+  transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: red;
+}
+
+
+.vertical-bar {
+    display: flex;   
+    background-color: navy;
+    width: 1px;
+    height: 50%;
+    margin: 20px;
+    margin-left: 100px;
+    margin-top: 250px;
+}
+
+.container {
+    display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center;     /* Vertical center */
+  width: 90%;
+  height: 90vh;
+    grid-column:  4 / 5;
+    margin: 20px;
+}
+
+input {
+    width: 90%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid navy;
+  background-color: transparent;
+  color: navy;
+  margin: 15px 0;
+  box-sizing: border-box;
+}
+
+.select-stock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 15px 0;
+  border-bottom: 2px solid navy;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.select-stock label {
+  font-size: 1rem;
+  color: #000;
+  white-space: nowrap;
+}
+
+.select-stock select {
+  flex: 1;
+  margin-left: 10px;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  color: navy;
+  padding: 4px 0;
+}
+
+.select-stock select:focus {
+  outline: none;
+}
+
+
+select {
+    height: 42px;
+    line-height: 1.5;
+}
+
+label[for="instock"] {
+    margin: 0;
+    font-size: 1rem;
+    gap: 5px;
+    color: #000;
+    margin: 0;
+    white-space: nowrap;
+}
+
+button {
+    width: 90%;
+    height: 40px;
+    margin-top: 20px;
+    background-color: rgb(12, 12, 94);
+    color: white;
+    border-radius: 20px;
+    font-size: normal;
+}
+
+
+@media (max-width: 768px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;   /* Stack vertically */
+    align-items: center;      /* Horizontally center everything */
+    margin: 10px;                /* Optional spacing between items */
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .header {
+    transform: none;
+    text-align: center;       /* Optional: center text inside header */
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .main-list,
+  .container {
+    width: 100%;              /* Make them responsive */
+    max-width: 500px;         /* Optional max width */
+  }
+
+  .main-list {
+    margin-bottom: 0;
+  }
+
+  .container {
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  button {
+    margin-bottom: 30px;
+  }
+}
