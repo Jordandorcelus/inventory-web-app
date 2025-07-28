@@ -5,13 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
-    <title>Inventory Web App</title>
+    <title>Inventory Web App</title>=
 </head>
 <body>
     <div class="grid-container">
     <h1 class="header">Booktory</h1>
     <div class="main-list">
         <h2>Available Books</h2>
+        <div class="controls">
+            <label for="sort">Sort By</label>
+            <select name="sorting" id="sort">
+                <option value="">--Select--</option>
+                <option value="title-asc">Title (A-Z)</option>
+                <option value="title-desc">Title (Z-A)</option>
+                <option value="price-asc">Price (Low to High)</option>
+                <option value="price-desc">Price (High to Low)</option>
+            </select>
+            <label for="filter">Filter</label>
+            <select name="filtering" id="filter">
+              <option value="all">All</option> 
+              <option value="in">In</option>
+              <option value="out">Out</option>
+            </select>
+            
+        </div>
         <ul class="book-list">
             <li class="first-book">
                 <a href="https://www.betterworldbooks.com/product/detail/swan-song-9780316258876">
@@ -24,8 +41,11 @@
                      <a href="https://en.wikipedia.org/wiki/Elin_Hilderbrand">
                         <p class="author-name">Elin Hilderbrand</p>
                     </a>
-                     <span class="stock in">In Stock</span>
+                     <span class="stock in" data-title="Swan Song">In Stock</span>
                     <p class="book-price">$18.99</p>
+                 </div>
+                 <div class="edit-wrap">
+                    <button class="edit-btn">Edit</button>
                  </div>
                 <div class="delete-wrap">
                      <button class="delete-btn">🗑️</button>
@@ -42,9 +62,12 @@
                         <a href="https://en.wikipedia.org/wiki/Ann_Cleeves">
                             <p class="author-name">Ann Cleeves</p>
                         </a>
-                        <span class="stock in">In Stock</span>
+                        <span class="stock in" data-title="The Lonely Man">In Stock</span>
                         <p class="book-price">$22.59</p>
                     </div>
+                    <div class="edit-wrap">
+                    <button class="edit-btn">Edit</button>
+                 </div>
                     <div class="delete-wrap">
                         <button class="delete-btn">🗑️</button>
                     </div>
@@ -61,9 +84,12 @@
                         <a href="https://en.wikipedia.org/wiki/Claire_Lynch">
                             <p class="author-name">Claire Lynch</p>
                         </a>
-                        <span class="stock in">In Stock</span>
+                        <span class="stock in" data-title="A Family Matter">In Stock</span>
                         <p class="book-price">$12.99</p>
                 </div>
+                <div class="edit-wrap">
+                    <button class="edit-btn">Edit</button>
+                 </div>
                 <div class="delete-wrap">
                         <button class="delete-btn">🗑️</button>
                     </div>
@@ -85,7 +111,8 @@
             <option value="false">No</option>
             </select>
     </div>
-            <button type="submit">Add Book</button>
+            <button type="submit"  id="submit-btn">Add Book</button>
+            <button type="button"  id="cancel-edit">Cancel Edit</button>
         </form>
     </div>
 </div>
